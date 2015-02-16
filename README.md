@@ -62,3 +62,20 @@ Add
     net.ipv4.tcp_wmem = 40966553667108864
     net.ipv4.tcp_mtu_probing = 1
     
+Input
+    
+    rm -f /sbin/modprobe
+    ln -s /bin/true /sbin/modprobe
+    rm -f /sbin/sysctl
+    ln -s /bin/true /sbin/sysctl
+    sysctl -p
+
+### Install Net_speeder
+
+    apt-get install libnet1
+    apt-get install libpcap0.8
+    apt-get install libnet1-dev
+    apt-get install libpcap0.8-dev
+    wget https://net-speeder.googlecode.com/files/net_speeder-v0.1.tar.gz
+    tar -zxvf net_speeder-v0.1.tar.gz
+    
