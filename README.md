@@ -14,7 +14,7 @@ Record for my Debian 7 vps for shadowsocks
     apt-get install python-pip
     pip install shadowsocks
 
-Create a config file /etc/shadowsocks.json. Example:
+Create a config file <code>/etc/shadowsocks.json.</code> Example:
 
     {
         "server":"my_server_ip",
