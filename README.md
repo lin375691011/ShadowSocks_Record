@@ -14,7 +14,7 @@ Record for my Debian 7 vps for shadowsocks
     apt-get install python-pip
     pip install shadowsocks
 
-Create a config file /etc/shadowsocks.json. Example:
+Create a config file <code>/etc/shadowsocks.json.</code> Example:
 
     {
         "server":"my_server_ip",
@@ -78,15 +78,4 @@ Input
     apt-get install libpcap0.8-dev
     wget https://net-speeder.googlecode.com/files/net_speeder-v0.1.tar.gz
     tar -zxvf net_speeder-v0.1.tar.gz
-    cd net_speeder
-    sh build.sh 
     
-### Start up
-
-    ulimit -n 51200
-    nohup ./net_speeder/net_speeder venet0:0 "ip" >/dev/null 2>log &
-    ssserver -c /etc/shadowsocks.json -d start
-
-### Stop
-
-    ssserver -c /etc/shadowsocks.json -d stop
