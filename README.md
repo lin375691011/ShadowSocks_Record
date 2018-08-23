@@ -90,3 +90,27 @@ Input
 ### Stop
 
     ssserver -c /etc/shadowsocks.json -d stop
+    
+
+
+
+
+## vultr server
+
+###
+
+    wget –no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh
+    chmod +x shadowsocksR.sh 
+    ./shadowsocksR.sh 2>&1 | tee shadowsocksR.log
+    rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-3.10.0-229.1.2.el7.x86_64.rpm --force
+    firewall-cmd --zone=public --add-port=3306/tcp --permanent
+    firewall-cmd --zone=public --add-port=3306/udp --permanent
+    firewall-cmd --zone=public --add-port=1521/tcp --permanent
+    firewall-cmd --zone=public --add-port=1521/udp --permanent
+    firewall-cmd --zone=public --add-port=1433/tcp --permanent
+    firewall-cmd --zone=public --add-port=1433/udp --permanent
+    firewall-cmd --zone=public --add-port=1434/tcp --permanent
+    firewall-cmd --zone=public --add-port=1434/udp --permanent
+    reboot
+    
+    wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh && bash serverspeeder.sh
